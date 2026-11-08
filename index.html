@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Jonathan Canola — Software · Systems</title>
-<meta name="description" content="Computer Science student building a C++ landing sim and telemetry project. Willing to relocate to Starbase, TX." />
+<title>Jonathan Canola — Computer Science Student</title>
+<meta name="description" content="Computer science student at CSU Global and T-Mobile Mobile Expert in California, planning a small C++ rocket-landing simulation." />
 <style>
   :root { color-scheme: light; }
   * { box-sizing: border-box; }
@@ -52,23 +52,52 @@
   .contact a:hover { border-bottom-color: #111; background: transparent; }
   .contact svg { width: 16px; height: 16px; flex-shrink: 0; }
   footer { margin-top: 56px; font-size: 12px; color: #999; }
-  @media (max-width: 480px) { main { padding: 40px 20px 60px; } header h1 { font-size: 26px; } }
+  .planned .project h3 { font-size: 22px; letter-spacing: -0.3px; }
+  .planned h4 {
+    font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px;
+    color: #666; margin: 18px 0 6px;
+  }
+  @media (max-width: 480px) {
+    main { padding: 40px 20px 60px; }
+    header h1 { font-size: 26px; }
+    .planned .project h3 { font-size: 20px; }
+  }
 </style>
 </head>
 <body>
 <main>
   <header>
     <h1>Jonathan Canola</h1>
-    <div class="role">Computer Science · T-Mobile Mobile Expert · Corona, CA</div>
-    <p class="pitch">Starting a C++ landing sim and UDP telemetry stack. Willing to relocate to Starbase, TX.</p>
+    <div class="role">Computer science student · T-Mobile Mobile Expert · California</div>
   </header>
 
   <hr />
 
   <section>
     <h2>About</h2>
-    <p>I work the frontline at a T-Mobile store while finishing a B.S. in Computer Science at CSU Global (expected April 2027). Day job is technical support and account work; nights and weekends are for systems-leaning C++.</p>
-    <p>Currently starting a real-time vertical-landing physics sim with a closed-loop controller, binary flight log, and UDP loopback telemetry. Public repo planned once the measured results are ready.</p>
+    <p>I’m Jonathan, a computer science student in California finishing my degree at CSU Global in April 2027. I work at T-Mobile, where troubleshooting phones and connectivity issues is part of my day. I’m now working toward building software of my own, starting with a planned C++ rocket-landing simulation that brings together physics, control systems and flight data.</p>
+  </section>
+
+  <hr />
+
+  <section class="planned">
+    <h2>Planned</h2>
+
+    <div class="project">
+      <h3>C++ rocket-landing simulation</h3>
+      <div class="meta">Planned · starting November 9, 2026</div>
+      <p>A small C++20 program that simulates a rocket descending toward a landing pad in 2D and tries to set it down softly. It's how I want to learn the way flight software fits together: physics, control, logging and telemetry working as one system.</p>
+      <h4>Physics</h4>
+      <p>Gravity pulls the rocket down, the engine pushes back, and fuel limits how long it can burn. The simulation will update position, speed and fuel in small fixed time steps.</p>
+      <h4>Controller</h4>
+      <p>A closed-loop controller will read the rocket's altitude and speed every step and adjust thrust to bring it down gently.</p>
+      <h4>Flight log and receiver</h4>
+      <p>Each run will be saved as a binary flight log, and live flight data will stream over UDP to a separate receiver program on the same computer, like a tiny ground station.</p>
+      <h4>Fault cases and tests</h4>
+      <p>I'll check how the system handles dropped telemetry packets and noisy sensor readings, with automated tests and a CMake build that runs them on every change.</p>
+      <h4>Learning</h4>
+      <p>Modern C++, how a real-time loop is structured, and how to test software where timing and failures matter.</p>
+    </div>
   </section>
 
   <hr />
@@ -77,15 +106,9 @@
     <h2>Projects</h2>
 
     <div class="project">
-      <h3>C++ Landing Sim &amp; Telemetry</h3>
-      <div class="meta">C++20 · planned Nov 2026 to Jan 2027 · repo pending</div>
-      <p>2D vertical-landing physics sim with a closed-loop controller, binary flight-log format, and UDP loopback telemetry to a ground-station receiver. Fault cases (packet loss, sensor noise), automated tests, and CMake CI planned. Link goes up in the Jan 2027 polish window once numbers are measured.</p>
-    </div>
-
-    <div class="project">
       <h3>This Site</h3>
-      <div class="meta">HTML · CSS · Static · GitHub Pages</div>
-      <p>Hand-written portfolio with no framework and no build step. Design goal: readable in five seconds, editable in ten.</p>
+      <div class="meta">HTML · CSS · GitHub Pages</div>
+      <p>A simple website built with HTML and CSS to share my background and projects.</p>
     </div>
   </section>
 
@@ -94,12 +117,12 @@
   <section class="skills">
     <h2>Skills</h2>
     <ul>
-      <li>C++ (starting Nov 2026)</li>
-      <li>Python (coursework)</li>
-      <li>Java (coursework)</li>
-      <li>JavaScript (coursework)</li>
-      <li>SQL</li>
-      <li>HTML/CSS</li>
+      <li>C++ — planned learning project</li>
+      <li>Python (from classes)</li>
+      <li>Java (from classes)</li>
+      <li>JavaScript (from classes)</li>
+      <li>SQL (from classes)</li>
+      <li>HTML and CSS (from classes)</li>
       <li>Git</li>
     </ul>
   </section>
